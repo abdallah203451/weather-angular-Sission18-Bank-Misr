@@ -1,0 +1,10 @@
+<div class="weather-container" *ngIf="weather">
+  @if (weather == 'error') {
+  <h2>Unable to retrieve weather data</h2>
+  }@else{
+  <h2>{{ weather.location.name }}, {{ weather.location.country }}</h2>
+  <p>Temperature: {{ weather.current.temp_c }} °C</p>
+  <p>Humidity: {{ weather.current.humidity }} %</p>
+  <p>Condition: {{ weather.current.condition.text }}</p>
+  }
+</div>
